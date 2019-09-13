@@ -19,3 +19,7 @@ phases:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
       - docker push 380160487772.dkr.ecr.ap-southeast-1.amazonaws.com/test:latest
+      - printf '[{"name":"hello-world","imageUri":"380160487772.dkr.ecr.ap-southeast-1.amazonaws.com/test:latest"}]' 380160487772.dkr.ecr.ap-southeast-1.amazonaws.com/test:latest > imagedefinitions.json
+
+artifacts:
+    files: imagedefinitions.json
