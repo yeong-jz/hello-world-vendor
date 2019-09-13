@@ -1,9 +1,9 @@
 { 
-    "executionRoleArn": "arn:aws:iam::641710438856:role/ecsTaskExecutionRole", 
+    "executionRoleArn": "arn:aws:iam::380160487772:role/ecsTaskExecutionRole", 
     "containerDefinitions": [ 
         { 
             "name": "test", 
-            "image": "<IMAGE1_NAME>", 
+            "image": "380160487772.dkr.ecr.ap-southeast-1.amazonaws.com/test:latest", 
             "essential": true, 
             "portMappings": [ 
                 { 
