@@ -39,6 +39,5 @@ stages:
     - task: ECRPushImage@1
       inputs:
         regionName: 'ap-southeast-1'
-        imageSource: $(tag)
         sourceImageName: $(tag)
         repositoryName: $(tag)
