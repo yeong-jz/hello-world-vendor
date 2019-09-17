@@ -35,6 +35,9 @@ stages:
     displayName: Push
     pool:
       vmImage: 'ubuntu-latest'
+    variables:
+      AWS.AccessKeyID: $(AWS_ACCESS_KEY_ID)
+      AWS.SecretAccessKey: $(AWS_SECRET_ACCESS_KEY)
     steps:
     - task: ECRPushImage@1
       inputs:
