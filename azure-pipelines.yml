@@ -9,7 +9,7 @@ resources:
 - repo: self
 
 variables:
-  tag: '380160487772.dkr.ecr.ap-southeast-1.amazonaws.com/test'
+  tag: '380160487772.dkr.ecr.ap-southeast-1.amazonaws.com/test:latest'
 
 stages:
 - stage: Build
