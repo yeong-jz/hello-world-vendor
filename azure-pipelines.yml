@@ -33,6 +33,9 @@ stages:
       displayName: Push Image
       inputs:
         regionName: 'ap-southeast-1'
-        sourceImageName: $(tag)
-        repositoryName: $(tag)
+        imageSource: 'imagename'
+        sourceImageName: '$(tag)'
+        sourceImageTag: 
+        repositoryName: '$(tag)'
+        pushTag: 
     
