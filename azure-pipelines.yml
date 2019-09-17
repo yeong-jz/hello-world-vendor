@@ -9,7 +9,7 @@ resources:
 - repo: self
 
 variables:
-  tag: '$(Build.BuildId)'
+  tag: '380160487772.dkr.ecr.ap-southeast-1.amazonaws.com/test'
 
 stages:
 - stage: Build
@@ -27,3 +27,18 @@ stages:
         dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+
+- stage: Push
+  displayName: Push image
+  jobs:  
+  - job: Push
+    displayName: Push
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: ECRPushImage@1
+      inputs:
+        regionName: 'ap-southeast-1'
+        imageSource: $(tag)
+        sourceImageName: $(tag)
+        repositoryName: $(tag)
