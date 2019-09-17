@@ -28,8 +28,7 @@ stages:
       inputs:
         command: build
         dockerfile: '**/Dockerfile'
-        tags: |
-          $(tag)
+        tags: $(tag)
     - task: ECRPushImage@1
       displayName: Push Image
       inputs:
